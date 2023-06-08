@@ -4,4 +4,4 @@
 format: jb-book
 root: intro
 chapters:
-- file: sessions/12_Decision_Tree
+- file: sessions/12_Logistic_Regression
