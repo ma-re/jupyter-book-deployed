@@ -1,0 +1,199 @@
+/*********************************************
+ * Set ROOT Information
+ *********************************************/
+
+/* set UU primary color pallet*/
+:root {
+  --color-nemo: #FF4A11 ;
+  --color-granite: #252629 ;
+  --color-sand: #EFECE7 ;
+  --color-water: #F3F5F9 ;
+  --color-foam: #FFFFFF ;
+}
+
+/*********************************************
+ * Set FONT Information
+ *********************************************/
+@font-face {
+    font-family: 'Coperate-Font';
+    src: url('marp/fonts/Inter/Inter-VariableFont_slnt,wght.ttf') format('f');
+}
+
+
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: "Coperate-Font", sans-serif;
+  line-height: 1.5;
+}
+
+.reveal h1 {
+  font-family: "Coperate-Font", sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+// this is the clear fix, so the container doesn't collapse and has height
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.text {
+  float: left;
+  width: 50%;
+}
+
+.images {
+  float: left;
+  width: 50%;
+}
+
+
+body.rise-enabled div.inner_cell>div.text_cell_render.rendered_html,
+.reveal body{
+  font-family: "Coperate-Font", sans-serif;
+  font-weight: 300;
+  font-size: 80%;
+}
+
+body.rise-enabled sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.2em;
+  font-size: 60%;
+}
+
+body.rise-enabled sub { 
+  top: 0.2em; 
+}
+
+
+/*********************************************
+ * Set COLUMN lay-out
+ *********************************************/
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*********************************************
+ * Set IMAGE settings
+ *********************************************/
+.reveal section img {
+  border: none;
+  background: none;
+}
+
+body.rise-enabled #logo {
+  width: 25%
+}
+
+#logo {
+  width: 15%
+}
+
+body.rise-enabled #col_img{
+  object-fit: cover;
+  width: 700px;
+  height: 700px;
+}
+
+#col_img{
+  object-fit: cover;
+  width: 350px;
+  height: 350px;
+}
+
+body.rise-enabled #undraw_col_img{
+  width: auto;
+  height: 500px;
+}
+
+#undraw_col_img{
+  width: auto;
+  height: 350px;
+}
+
+body.rise-enabled #full_screen_crop{
+  object-fit: cover;
+  width: 100%;
+  height: 700px;
+}
+
+#full_screen_crop{
+  object-fit: cover;
+  width: 100%;
+  height: 350px;
+}
+
+body.rise-enabled #full_screen{
+  width: auto;
+  height: 700px;
+}
+
+#full_screen{
+  width: auto;
+  height: 350px;
+}
+
+/*********************************************
+ * Set HEADER and FOOTER information
+ *********************************************/
+body.rise-enabled .header{
+    top: 5%;
+    width: 100%;
+}
+
+#image_caption{
+  font-size: small;    
+}
+
+body.rise-enabled .footer{
+    font-size: 60%;
+    bottom: 25px;
+    position: fixed;
+    padding-bottom: 10px;
+    color: grey;
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
+  border-right-color: var(--color-2); }
+
+.reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
+  border-left-color: var(--color-2); }
+
+.reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
+  border-bottom-color: var(--color-2); }
+
+.reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
+  border-top-color: var(--color-2); }
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: var(--color-1); }
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: var(--color-1); }
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: var(--color-1); }
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: var(--color-1); }

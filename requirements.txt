@@ -1,0 +1,7 @@
+notebook
+jupyter-book
+jupytext
+rise
+ghp-import 
+pix2tex==0.1.2
+click==8.1.3
