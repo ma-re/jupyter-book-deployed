@@ -1,3 +1,4 @@
+pandas
 notebook
 jupyter-book
 jupytext
