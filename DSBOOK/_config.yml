@@ -26,3 +26,9 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+
+# including those that are enabled by default! See here: https://jupyterbook.org/en/stable/customize/config.html
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    - html_image
