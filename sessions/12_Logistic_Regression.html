@@ -61,8 +61,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'sessions/12_Logistic_Regression';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -438,7 +436,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="first-part-necessary-code">
+  <section id="first-part-necessary-code">
 <h1>First Part - Necessary Code<a class="headerlink" href="#first-part-necessary-code" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -716,7 +714,7 @@ document.write(`
 </div>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="second-part-lecture">
+<section id="second-part-lecture">
 <h1>Second Part - Lecture<a class="headerlink" href="#second-part-lecture" title="Permalink to this heading">#</a></h1>
 <section id="recap">
 <h2>Recap!<a class="headerlink" href="#recap" title="Permalink to this heading">#</a></h2>
@@ -848,16 +846,16 @@ document.write(`
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Accuracy</p></td>
-<td><p>$<span class="math notranslate nohighlight">\({\frac{130}{200}}=0.65\)</span>$</p></td>
+<td><p>$${\frac{130}{200}}=0.65$$</p></td>
 </tr>
 <tr class="row-odd"><td><p>Precision</p></td>
-<td><p>$<span class="math notranslate nohighlight">\({\frac{70}{110}}=0.64\)</span>$</p></td>
+<td><p>$${\frac{70}{110}}=0.64$$</p></td>
 </tr>
 <tr class="row-even"><td><p>Recall</p></td>
-<td><p>$<span class="math notranslate nohighlight">\({\frac{70}{100}}=0.7\)</span>$</p></td>
+<td><p>$${\frac{70}{100}}=0.7$$</p></td>
 </tr>
 <tr class="row-odd"><td><p>F1-Score</p></td>
-<td><p>$<span class="math notranslate nohighlight">\(2\cdot \frac{\frac{70}{100}\cdot \frac{70}{110}}{\frac{70}{100} + \frac{70}{110}}=\frac{2}{3}\)</span>$</p></td>
+<td><p>$$2\cdot \frac{\frac{70}{100}\cdot \frac{70}{110}}{\frac{70}{100} + \frac{70}{110}}=\frac{2}{3}$$</p></td>
 </tr>
 <tr class="row-even"><td><p>ROC AUC</p></td>
 <td><p>-</p></td>
@@ -911,8 +909,7 @@ document.write(`
 <li><p>Animal detection: cat vs dog vs monkey vs… (multi class classification)</p></li>
 <li><p>Face recognition: iphone owner or not</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[y\in\{0,1\}\]</div>
+<p>$$y\in{0,1}$$</p>
 <p>0 : the negative class (not spam, malignant, not cat)</p>
 <p>1 : the positive class (spam, benign, cat)</p>
   </div>
@@ -935,8 +932,7 @@ document.write(`
 </section>
 <section id="id4">
 <h2>Why classification?<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[h_{b}(x)=b^{T}x\]</div>
+<p>$$h_{b}(x)=b^{T}x$$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">create_example</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">regression</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -950,10 +946,9 @@ document.write(`
 </section>
 <section id="id5">
 <h2>Why classification?<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
-<p>if <span class="math notranslate nohighlight">\(h_{b}(x)\geq0.5\)</span> then predict “y = 1” / sad</p>
-<p>if <span class="math notranslate nohighlight">\(h_{b}(x)&lt;0.5\)</span> then predict “y = 0” / not sad</p>
-<div class="math notranslate nohighlight">
-\[h_{b}(x)=b^{T}x\]</div>
+<p>if $h_{b}(x)\geq0.5$ then predict “y = 1” / sad</p>
+<p>if $h_{b}(x)&lt;0.5$ then predict “y = 0” / not sad</p>
+<p>$$h_{b}(x)=b^{T}x$$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">create_example</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">regression</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">add_lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -999,31 +994,29 @@ document.write(`
 <section id="another-problem-with-classification-with-linear-regression-for-classification">
 <h2>Another problem with classification with linear regression (for classification)<a class="headerlink" href="#another-problem-with-classification-with-linear-regression-for-classification" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>y can be 1 or 0 (or any other labels)  <span class="math notranslate nohighlight">\(y\in\{0,1\}\)</span></p></li>
-<li><p>but the hypothesis <span class="math notranslate nohighlight">\(h_{b}(x)\)</span> can be larger than 1 or smaller than 0 even when all the training data was with 0 and 1</p></li>
+<li><p>y can be 1 or 0 (or any other labels)  $y\in{0,1}$</p></li>
+<li><p>but the hypothesis $h_{b}(x)$ can be larger than 1 or smaller than 0 even when all the training data was with 0 and 1</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[h_{b}(x)=b^{T}x\]</div>
-<div class="math notranslate nohighlight">
-\[h_{b}(x)\in\mathbb{R}\]</div>
+<p>$$h_{b}(x)=b^{T}x$$
+$$h_{b}(x)\in\mathbb{R}$$</p>
 </section>
 <section id="logistic-regression-model">
 <h2>Logistic Regression Model<a class="headerlink" href="#logistic-regression-model" title="Permalink to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(0\leq h_{b}(x) \leq 1\)</span></p>
-<p>Linear regression: <span class="math notranslate nohighlight">\(h_{b}(x)=b^{T}x\)</span></p>
-<p>Logistic regression: <span class="math notranslate nohighlight">\(h_{b}(x)=\sigma(b^{T}x)\)</span></p>
-<p>Sigmoid function aka. logistic function:  <span class="math notranslate nohighlight">\(\sigma(t)=\frac{1}{1+e^{-t}}\)</span></p>
+<p>$0\leq h_{b}(x) \leq 1$</p>
+<p>Linear regression: $h_{b}(x)=b^{T}x$</p>
+<p>Logistic regression: $h_{b}(x)=\sigma(b^{T}x)$</p>
+<p>Sigmoid function aka. logistic function:  $\sigma(t)=\frac{1}{1+e^{-t}}$</p>
 <section id="the-logistic-function">
 <h3>The Logistic function<a class="headerlink" href="#the-logistic-function" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Sigmoid function makes values fit into (0,1):
-$<span class="math notranslate nohighlight">\(\sigma(t)=\frac{1}{1+e^{-t}}\)</span>$</p></li>
+$$\sigma(t)=\frac{1}{1+e^{-t}}$$</p></li>
 <li><p>the sigmoid asymptotes to 0 when t goes to minus infinity:
-$<span class="math notranslate nohighlight">\(\operatorname*{lim}_{t\rightarrow-\infty}\sigma(t)=0\)</span>$</p></li>
+$$\operatorname*{lim}_{t\rightarrow-\infty}\sigma(t)=0$$</p></li>
 <li><p>the sigmoid asymptotes to 1 when t goes to infinity:
-$<span class="math notranslate nohighlight">\(\operatorname*{lim}_{t\rightarrow\infty}\sigma(t)=1\)</span>$</p></li>
+$$\operatorname*{lim}_{t\rightarrow\infty}\sigma(t)=1$$</p></li>
 <li><p>all its values lie within (0,1)
-$<span class="math notranslate nohighlight">\(\sigma(t)\in\{0,1\}\)</span>$</p></li>
+$$\sigma(t)\in{0,1}$$</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1042,14 +1035,12 @@ $<span class="math notranslate nohighlight">\(\sigma(t)\in\{0,1\}\)</span>$</p><
 <ul class="simple">
 <li><p>Sigmoid function makes values fit into (0,1)</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\sigma(t)=\frac{1}{1+e^{-t}}\]</div>
-<div class="math notranslate nohighlight">
-\[h_{b}(x)=\frac{1}{1+e^{-b^Tx}}\]</div>
+<p>$$\sigma(t)=\frac{1}{1+e^{-t}}$$</p>
+<p>$$h_{b}(x)=\frac{1}{1+e^{-b^Tx}}$$</p>
 <ul class="simple">
 <li><p>we then need to pick the parameters b</p>
 <ul>
-<li><p>t is equivalent to <span class="math notranslate nohighlight">\(b^T(x)\)</span></p></li>
+<li><p>t is equivalent to $b^T(x)$</p></li>
 </ul>
 </li>
 </ul>
@@ -1066,53 +1057,46 @@ $<span class="math notranslate nohighlight">\(\sigma(t)\in\{0,1\}\)</span>$</p><
 </section>
 <section id="interpretation-of-the-hypothesis">
 <h2>Interpretation of the Hypothesis<a class="headerlink" href="#interpretation-of-the-hypothesis" title="Permalink to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(h_b(x)\)</span> is the probability that y = 1 on input x</p>
+<p>$h_b(x)$ is the probability that y = 1 on input x</p>
 <p>Example:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-x = \begin{bmatrix} x_0 \\ x_1\end{bmatrix} = \begin{bmatrix} 1 \\ \text{#negWords}\end{bmatrix}
-\end{split}\]</div>
+<p>$$
+x = \begin{bmatrix} x_0 \ x_1\end{bmatrix} = \begin{bmatrix} 1 \ \text{#negWords}\end{bmatrix}
+$$</p>
 </section>
 <section id="id9">
 <h2>Interpretation of the Hypothesis<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(h_b(x)\)</span> is the probability that y = 1 on input x</p>
+<p>$h_b(x)$ is the probability that y = 1 on input x</p>
 <p>Example:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-x = \begin{bmatrix} x_0 \\ x_1\end{bmatrix} = \begin{bmatrix} 1 \\ \text{#negWords}\end{bmatrix}
-\end{split}\]</div>
-<p><span class="math notranslate nohighlight">\(h_{b}(x)=0.8\)</span></p>
+<p>$$
+x = \begin{bmatrix} x_0 \ x_1\end{bmatrix} = \begin{bmatrix} 1 \ \text{#negWords}\end{bmatrix}
+$$</p>
+<p>$h_{b}(x)=0.8$</p>
 <p>The sentence has a 80% probability of being sad.
 The probability of y=1 given the feature vector x is 80%</p>
 <p>Notation:</p>
-<p><span class="math notranslate nohighlight">\(h_{b}(x)=p(y=1\mid x;b)\)</span></p>
+<p>$h_{b}(x)=p(y=1\mid x;b)$</p>
 </section>
 <section id="id10">
 <h2>Interpretation of the Hypothesis<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(h_b(x)\)</span> is the probability that y = 1 on input x</p>
+<p>$h_b(x)$ is the probability that y = 1 on input x</p>
 <p>Example:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-x = \begin{bmatrix} x_0 \\ x_1\end{bmatrix} = \begin{bmatrix} 1 \\ \text{#negWords}\end{bmatrix}
-\end{split}\]</div>
-<p><span class="math notranslate nohighlight">\(h_{b}(x)=0.8\)</span></p>
+<p>$$
+x = \begin{bmatrix} x_0 \ x_1\end{bmatrix} = \begin{bmatrix} 1 \ \text{#negWords}\end{bmatrix}
+$$</p>
+<p>$h_{b}(x)=0.8$</p>
 <p>The sentence has a 80% probability of being sad.
 The probability of y=1 given the feature vector x is 80%</p>
 <p>Notation:</p>
-<p><span class="math notranslate nohighlight">\(h_{b}(x)=p(y=1\mid x;b)\)</span></p>
-<p>What is: $<span class="math notranslate nohighlight">\(p(y=0\mid x;b)\)</span>$</p>
+<p>$h_{b}(x)=p(y=1\mid x;b)$</p>
+<p>What is: $$p(y=0\mid x;b)$$</p>
 </section>
 <section id="id11">
 <h2>Interpretation of the Hypothesis<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h2>
 <p>This is a classification problem, so y has to be 0 or 1</p>
-<div class="math notranslate nohighlight">
-\[p(y=1\mid x;b)+p(y=0\mid x;b)=1\]</div>
-<div class="math notranslate nohighlight">
-\[h_{b}(x)=\ p(y=1\mid x;b)\ =\ 1\ -\ p(y=0\mid x;b)\]</div>
-<div class="math notranslate nohighlight">
-\[\underbrace{p(y=1\mid x;b)}_{\color{red}{\text{sad}}}+ \underbrace{p(y=0\mid x;b)}_{\color{green}{\text{not sad (happy)}}} = 1\]</div>
-<div class="math notranslate nohighlight">
-\[h_{b}(x)=\underbrace{p(y=1\mid x;b)}_{\color{red}{\text{sad}}} =  1-\underbrace{p(y=0\mid x;b)}_{\color{green}{\text{not sad (happy)}}}\]</div>
+<p>$$p(y=1\mid x;b)+p(y=0\mid x;b)=1$$</p>
+<p>$$h_{b}(x)=\ p(y=1\mid x;b)\ =\ 1\ -\ p(y=0\mid x;b)$$</p>
+<p>$$\underbrace{p(y=1\mid x;b)}<em>{\color{red}{\text{sad}}}+ \underbrace{p(y=0\mid x;b)}</em>{\color{green}{\text{not sad (happy)}}} = 1$$</p>
+<p>$$h_{b}(x)=\underbrace{p(y=1\mid x;b)}<em>{\color{red}{\text{sad}}} =  1-\underbrace{p(y=0\mid x;b)}</em>{\color{green}{\text{not sad (happy)}}}$$</p>
 </section>
 <section id="the-decision-boundary">
 <h2>The decision boundary<a class="headerlink" href="#the-decision-boundary" title="Permalink to this heading">#</a></h2>
@@ -1120,8 +1104,7 @@ The probability of y=1 given the feature vector x is 80%</p>
 <li><p>we could do 0.5 as the threshold (default in sklearn implementation)</p></li>
 <li><p>If the probability is bigger than or equal to 0.5 it is classified as 1, else as 0.</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\begin{split} \hat{y}= \begin{cases} 1 &amp; \text{if } \hat{p} \ge 0.5 \\ 0 &amp; \text{if } \hat{p} &lt; 0.5 \ \end{cases} \end{split}\]</div>
+<p>$$ \hat{y}= \begin{cases} 1 &amp; \text{if } \hat{p} \ge 0.5 \ 0 &amp; \text{if } \hat{p} &lt; 0.5 \ \end{cases} $$</p>
 <ul class="simple">
 <li><p><strong>For what t is the sigmoid greater than 0.5?</strong></p></li>
 </ul>
@@ -1142,8 +1125,7 @@ The probability of y=1 given the feature vector x is 80%</p>
 <li><p>we could do 0.5 as the threshold (default in sklearn implementation)</p></li>
 <li><p>If the probability is bigger than or equal to 0.5 it is classified as 1, else as 0.</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{array}{c}{{\hat{p}\:=\:\sigma\bigl(b^{T}\,x\bigr)\:\ge\:0.5}}\\ {{b^{T}\:x\geq0}}\end{array}\end{split}\]</div>
+<p>$$ \begin{array}{c}{{\hat{p}:=:\sigma\bigl(b^{T},x\bigr):\ge:0.5}}\ {{b^{T}:x\geq0}}\end{array}$$</p>
 <ul class="simple">
 <li><p><strong>When do we predict y = 0?</strong></p></li>
 </ul>
@@ -1165,8 +1147,7 @@ The probability of y=1 given the feature vector x is 80%</p>
 <li><p>0.5 is the threshold</p></li>
 <li><p>If the probability is bigger than or equal to 0.5 it is classified as 1, else as 0.</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\begin{split} \hat{y}= \begin{cases} 1 &amp; \text{if } \hat{p} \ge 0.5 \\ 0 &amp; \text{if } \hat{p} &lt; 0.5 \ \end{cases} \end{split}\]</div>
+<p>$$ \hat{y}= \begin{cases} 1 &amp; \text{if } \hat{p} \ge 0.5 \ 0 &amp; \text{if } \hat{p} &lt; 0.5 \ \end{cases} $$</p>
 <p><strong>Why 0.5? Good question!</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1191,10 +1172,10 @@ business problem!</p>
   </div>
 </div></section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="hands-on">
+<section id="hands-on">
 <h1>Hands on.<a class="headerlink" href="#hands-on" title="Permalink to this heading">#</a></h1>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="example-time">
+<section id="example-time">
 <h1>Example time!<a class="headerlink" href="#example-time" title="Permalink to this heading">#</a></h1>
 <section id="id15">
 <h2>Decision Boundary Example<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h2>
@@ -1221,9 +1202,9 @@ business problem!</p>
 </section>
 <section id="id16">
 <h2>Decision Boundary Example<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(\hat{p} = \sigma(b_0+ b_1 x_1 +b_2 x_2) = \sigma(b^T x)\)</span></p>
-<p><span class="math notranslate nohighlight">\(b = \begin{bmatrix}b_0\\b_1\\b_2 \end{bmatrix}\)</span>,  <span class="math notranslate nohighlight">\(X = \begin{bmatrix}x_0=1\\x_1\\x_2 \end{bmatrix}\)</span></p>
-<p><span class="math notranslate nohighlight">\(b^{T}\cdot X=\begin{bmatrix}b_0 &amp; b_1 &amp; b_2 \end{bmatrix}\cdot\begin{bmatrix}x_0\\x_1\\x_2 \end{bmatrix}=\,b_{0}\cdot x_{0}\,+\,b_{1}\cdot x_{1}\,+\,b_{2}\cdot\,x_{2}\)</span></p>
+<p>$\hat{p} = \sigma(b_0+ b_1 x_1 +b_2 x_2) = \sigma(b^T x)$</p>
+<p>$b = \begin{bmatrix}b_0\b_1\b_2 \end{bmatrix}$,  $X = \begin{bmatrix}x_0=1\x_1\x_2 \end{bmatrix}$</p>
+<p>$b^{T}\cdot X=\begin{bmatrix}b_0 &amp; b_1 &amp; b_2 \end{bmatrix}\cdot\begin{bmatrix}x_0\x_1\x_2 \end{bmatrix}=,b_{0}\cdot x_{0},+,b_{1}\cdot x_{1},+,b_{2}\cdot,x_{2}$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decision_boundary</span><span class="p">(</span><span class="n">dec_boundary</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dec_boundary_background</span><span class="o">=</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span><span class="kc">False</span><span class="p">))</span>
@@ -1238,8 +1219,8 @@ business problem!</p>
 </section>
 <section id="id17">
 <h2>Decision Boundary Example<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(b=\left[\begin{array}{c}{{-3\ }}\\ {{1}}\\ {{1}}\end{array}\right]\)</span></p>
-<p><span class="math notranslate nohighlight">\(\hat{p} = \sigma(b_0+ b_1 x_1 +b_2 x_2) = \sigma(b^T x)\)</span></p>
+<p>$b=\left[\begin{array}{c}{{-3\ }}\ {{1}}\ {{1}}\end{array}\right]$</p>
+<p>$\hat{p} = \sigma(b_0+ b_1 x_1 +b_2 x_2) = \sigma(b^T x)$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decision_boundary</span><span class="p">(</span><span class="n">dec_boundary</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dec_boundary_background</span><span class="o">=</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span><span class="kc">False</span><span class="p">))</span>
@@ -1253,11 +1234,11 @@ business problem!</p>
 </section>
 <section id="id18">
 <h2>Decision Boundary Example<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(b=\left[\begin{array}{c}{{-3\ }}\\ {{1}}\\ {{1}}\end{array}\right]\)</span></p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
-\hat{p} &amp;= \sigma(b_0+ b_1 x_1 +b_2 x_2) = \sigma(b^T x) \\
+<p>$b=\left[\begin{array}{c}{{-3\ }}\ {{1}}\ {{1}}\end{array}\right]$</p>
+<p>$\begin{align*}
+\hat{p} &amp;= \sigma(b_0+ b_1 x_1 +b_2 x_2) = \sigma(b^T x) \
 \hat{p} &amp;= \sigma(-3+ x_1 +x_2) = \sigma(b^T x)
-\end{align*}\)</span></p>
+\end{align*}$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decision_boundary</span><span class="p">(</span><span class="n">dec_boundary</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dec_boundary_background</span><span class="o">=</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span><span class="kc">False</span><span class="p">))</span>
@@ -1271,9 +1252,9 @@ business problem!</p>
 </section>
 <section id="id19">
 <h2>Decision Boundary Example<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(\hat{p} = \sigma(-3+ x_1 +x_2) = \sigma(b^T x)\)</span></p>
+<p>$\hat{p} = \sigma(-3+ x_1 +x_2) = \sigma(b^T x)$</p>
 <p>We predict “y = 1” when:</p>
-<p><span class="math notranslate nohighlight">\(\hat{p}\geq0.5 \text{ when } b^T x\geq0\)</span> (remember the sigmoid function!)</p>
+<p>$\hat{p}\geq0.5 \text{ when } b^T x\geq0$ (remember the sigmoid function!)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decision_boundary</span><span class="p">(</span><span class="n">dec_boundary</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dec_boundary_background</span><span class="o">=</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span><span class="kc">False</span><span class="p">))</span>
@@ -1287,13 +1268,13 @@ business problem!</p>
 </section>
 <section id="id20">
 <h2>Decision Boundary Example<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(\hat{p} = \sigma(-3+ x_1 +x_2) = \sigma(b^T x)\)</span></p>
+<p>$\hat{p} = \sigma(-3+ x_1 +x_2) = \sigma(b^T x)$</p>
 <p>We predict “y = 1” when:</p>
-<p><span class="math notranslate nohighlight">\(\hat{p}\geq0.5 \text{ when } b^T x\geq0\)</span></p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
--3+x_1+x_2\geq0 \\
+<p>$\hat{p}\geq0.5 \text{ when } b^T x\geq0$</p>
+<p>$\begin{align*}
+-3+x_1+x_2\geq0 \
 x_1+x_2\geq3
-\end{align*}\)</span></p>
+\end{align*}$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decision_boundary</span><span class="p">(</span><span class="n">dec_boundary</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dec_boundary_background</span><span class="o">=</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span><span class="kc">False</span><span class="p">))</span>
@@ -1307,9 +1288,9 @@ x_1+x_2\geq3
 </section>
 <section id="id21">
 <h2>Decision Boundary Example<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(\hat{p} = \sigma(-3+ x_1 +x_2) = \sigma(b^T x)\)</span></p>
+<p>$\hat{p} = \sigma(-3+ x_1 +x_2) = \sigma(b^T x)$</p>
 <p>We predict “y = 1” when:</p>
-<p><span class="math notranslate nohighlight">\(\color{#0000FF}{x_1+x_2\geq3}\)</span></p>
+<p>$\color{#0000FF}{x_1+x_2\geq3}$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decision_boundary</span><span class="p">(</span><span class="n">dec_boundary</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dec_boundary_background</span><span class="o">=</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span><span class="kc">True</span><span class="p">))</span>
@@ -1317,17 +1298,17 @@ x_1+x_2\geq3
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/fc04da5777b4b868b1ec39b4b020f78d654786a7a8db54317724f1b7df51e1ca.png" src="../_images/fc04da5777b4b868b1ec39b4b020f78d654786a7a8db54317724f1b7df51e1ca.png" />
+<img alt="../_images/140ec7db9aa24c3bc31e6e6aec2a72a74a4b2fa442057ac3f2027d832a2a9e5b.png" src="../_images/140ec7db9aa24c3bc31e6e6aec2a72a74a4b2fa442057ac3f2027d832a2a9e5b.png" />
 </div>
 </div>
 </section>
 <section id="id22">
 <h2>Decision Boundary Example<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(\hat{p} = \sigma(-3+ x_1 +x_2) = \sigma(b^T x)\)</span></p>
+<p>$\hat{p} = \sigma(-3+ x_1 +x_2) = \sigma(b^T x)$</p>
 <p>We predict “y = 1” when:</p>
-<p><span class="math notranslate nohighlight">\(\color{#0000FF}{x_1+x_2\geq3}\)</span></p>
+<p>$\color{#0000FF}{x_1+x_2\geq3}$</p>
 <p>We predict “y = 0” when:</p>
-<p><span class="math notranslate nohighlight">\(\color{#FF4A11}{x_1+x_2&lt;3}\)</span></p>
+<p>$\color{#FF4A11}{x_1+x_2&lt;3}$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decision_boundary</span><span class="p">(</span><span class="n">dec_boundary</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dec_boundary_background</span><span class="o">=</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span><span class="kc">True</span><span class="p">))</span>
@@ -1335,22 +1316,22 @@ x_1+x_2\geq3
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8071e232070fb108a6cc9e851da0b4d6413e71ed0456d1755f0bba7d7a1bde14.png" src="../_images/8071e232070fb108a6cc9e851da0b4d6413e71ed0456d1755f0bba7d7a1bde14.png" />
+<img alt="../_images/16e862a0f7d58efdb9423f41de2288009d0b34743c350e255024191f3291edf5.png" src="../_images/16e862a0f7d58efdb9423f41de2288009d0b34743c350e255024191f3291edf5.png" />
 </div>
 </div>
 </section>
 <section id="id23">
 <h2>Decision Boundary Example<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(\hat{p} = \sigma(-3+ x_1 +x_2) = \sigma(b^T x)\)</span></p>
+<p>$\hat{p} = \sigma(-3+ x_1 +x_2) = \sigma(b^T x)$</p>
 <p>We predict “y = 1” when:</p>
-<p><span class="math notranslate nohighlight">\(\color{#0000FF}{x_1+x_2\geq3}\)</span></p>
+<p>$\color{#0000FF}{x_1+x_2\geq3}$</p>
 <p>We predict “y = 0” when:</p>
-<p><span class="math notranslate nohighlight">\(\color{#FF4A11}{x_1+x_2&lt;3}\)</span></p>
+<p>$\color{#FF4A11}{x_1+x_2&lt;3}$</p>
 <p>Decision Boundary:</p>
-<p><span class="math notranslate nohighlight">\(\begin{align*}
-x_1+x_2=3 \\
+<p>$\begin{align*}
+x_1+x_2=3 \
 x_2=3-x_1
-\end{align*}\)</span></p>
+\end{align*}$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decision_boundary</span><span class="p">(</span><span class="n">dec_boundary</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dec_boundary_background</span><span class="o">=</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span><span class="kc">True</span><span class="p">))</span>
@@ -1358,7 +1339,7 @@ x_2=3-x_1
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8071e232070fb108a6cc9e851da0b4d6413e71ed0456d1755f0bba7d7a1bde14.png" src="../_images/8071e232070fb108a6cc9e851da0b4d6413e71ed0456d1755f0bba7d7a1bde14.png" />
+<img alt="../_images/16e862a0f7d58efdb9423f41de2288009d0b34743c350e255024191f3291edf5.png" src="../_images/16e862a0f7d58efdb9423f41de2288009d0b34743c350e255024191f3291edf5.png" />
 </div>
 </div>
 </section>
@@ -1374,14 +1355,14 @@ x_2=3-x_1
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0f6539755c53893194879875b8ec40824894406c1d240c971b97573f4bc1ee14.png" src="../_images/0f6539755c53893194879875b8ec40824894406c1d240c971b97573f4bc1ee14.png" />
+<img alt="../_images/1715766cfa667e6199467b19ecf882f6d6e3d2e3210d2e01b3a44691b394e06d.png" src="../_images/1715766cfa667e6199467b19ecf882f6d6e3d2e3210d2e01b3a44691b394e06d.png" />
 </div>
 </div>
 <div class="group">
   <div class="text">
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="no-more-mystical-stuff-let-s-train">
+<section id="no-more-mystical-stuff-let-s-train">
 <h1>No more mystical stuff. Let’s train!<a class="headerlink" href="#no-more-mystical-stuff-let-s-train" title="Permalink to this heading">#</a></h1>
   </div>
   <div class="images">
@@ -1389,22 +1370,20 @@ x_2=3-x_1
   </div>
 </div><section id="the-cost-function">
 <h2>The Cost Function<a class="headerlink" href="#the-cost-function" title="Permalink to this heading">#</a></h2>
-<p>Training set: <span class="math notranslate nohighlight">\(\{(x^1, y^1), (x^2, y^2), ... (x^n, y^n)\}\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split} x\,=\,\left[{\begin{array}{c}{x_{0}}\\ {x_{1}}\\ {\vdots}\\ {x_{m}}\end{array}}\right],x_{0}\,=\,1,\,y\,\in\,\{0,1\}\end{split}\]</div>
+<p>Training set: ${(x^1, y^1), (x^2, y^2), … (x^n, y^n)}$</p>
+<p>$$ x,=,\left[{\begin{array}{c}{x_{0}}\ {x_{1}}\ {\vdots}\ {x_{m}}\end{array}}\right],x_{0},=,1,,y,\in,{0,1}$$</p>
 <p>How do we chose the right parameters <em>b</em>?</p>
 <p>Fitting the parameter <em>b</em> to the data.</p>
-<div class="math notranslate nohighlight">
-\[ \hat{p}=\frac{1}{1+e^{-b^{T}x}}\]</div>
+<p>$$ \hat{p}=\frac{1}{1+e^{-b^{T}x}}$$</p>
 </section>
 <section id="id24">
 <h2>The Cost Function<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h2>
 <div class="group">
   <div class="text">
 <p>The linear regression cost function (remember OLS).
-$<span class="math notranslate nohighlight">\( J(b)={\textstyle{\frac{1}{2n}}}\sum(\hat{p}\,-\,y)^{2}\)</span>$</p>
+$$ J(b)={\textstyle{\frac{1}{2n}}}\sum(\hat{p},-,y)^{2}$$</p>
 <p>Logistic regression hypothesis:
-$<span class="math notranslate nohighlight">\( \hat{p}=\frac{1}{1+e^{-b^{T}x}}\)</span>$</p>
+$$ \hat{p}=\frac{1}{1+e^{-b^{T}x}}$$</p>
 <p>This would though lead to a non-convex function which is hard to optimize. The usual way to optimize is to find the global minimum.</p>
   </div>
   <div class="images">
@@ -1414,15 +1393,13 @@ $<span class="math notranslate nohighlight">\( \hat{p}=\frac{1}{1+e^{-b^{T}x}}\)
 <section id="id25">
 <h2>The Cost Function<a class="headerlink" href="#id25" title="Permalink to this heading">#</a></h2>
 <p>Logistic regression hypothesis:</p>
-<div class="math notranslate nohighlight">
-\[ \hat{p}=\frac{1}{1+e^{-b^{T}x}}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<p>$$ \hat{p}=\frac{1}{1+e^{-b^{T}x}}$$</p>
+<p>$$
 Loss(\hat{p},y)=\begin{cases}
--\ln{(\hat{p})} &amp;\text{if } y=1 \\
+-\ln{(\hat{p})} &amp;\text{if } y=1 \
 -\ln{(1-\hat{p})} &amp;\text{if } y=0
 \end{cases}
-\end{split}\]</div>
+$$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_logarithm</span><span class="p">(</span><span class="n">nemo</span><span class="p">)</span>
@@ -1437,17 +1414,16 @@ Loss(\hat{p},y)=\begin{cases}
 <section id="loss-based-on-logs-of-probabilities">
 <h2>Loss based on logs of probabilities<a class="headerlink" href="#loss-based-on-logs-of-probabilities" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>For instances belonging to class 1 =&gt; Loss is the negative log of <span class="math notranslate nohighlight">\(\hat{p}(y=1)\)</span></p></li>
+<li><p>For instances belonging to class 1 =&gt; Loss is the negative log of $\hat{p}(y=1)$</p></li>
 </ul>
 <p>Probability is close to zero? Loss is high!</p>
 <p>Probability is close to one? Loss is low!</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<p>$$
 Loss(\hat{p},y)=\begin{cases}
--\ln{(\hat{p})} &amp;\text{if } y=1 \\
+-\ln{(\hat{p})} &amp;\text{if } y=1 \
 -\ln{(1-\hat{p})} &amp;\text{if } y=0
 \end{cases}
-\end{split}\]</div>
+$$</p>
 <p>For (correct) probabilities of 0 / 1, the loss would be zero.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1466,17 +1442,16 @@ Loss(\hat{p},y)=\begin{cases}
 <h2>Loss based on logs of probabilities<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>For instances belonging to class 0
-=&gt; Loss is the negative log of <span class="math notranslate nohighlight">\(1-\hat{p}(y=1)\)</span></p></li>
+=&gt; Loss is the negative log of $1-\hat{p}(y=1)$</p></li>
 </ul>
 <p>Probability is close to zero? Loss is low!</p>
 <p>Probability is close to one? Loss is high!</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<p>$$
 Loss(\hat{p},y)=\begin{cases}
--\ln{(\hat{p})} &amp;\text{if } y=1 \\
+-\ln{(\hat{p})} &amp;\text{if } y=1 \
 -\ln{(1-\hat{p})} &amp;\text{if } y=0
 \end{cases}
-\end{split}\]</div>
+$$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
@@ -1492,47 +1467,41 @@ Loss(\hat{p},y)=\begin{cases}
 </section>
 <section id="now-just-add-it-all-up">
 <h2>Now, just add it all up<a class="headerlink" href="#now-just-add-it-all-up" title="Permalink to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<p>$$
 Loss(\hat{p},y)=\begin{cases}
--\ln{(\hat{p})} &amp;\text{if } y=1 \\
+-\ln{(\hat{p})} &amp;\text{if } y=1 \
 -\ln{(1-\hat{p})} &amp;\text{if } y=0
 \end{cases}
-\end{split}\]</div>
+$$</p>
 <p>Because y is always 0 or 1 we can write this:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 Loss(\hat{p},y)=y\cdot\big(-\ln{(\hat{p})}\big)+(1-y)\cdot\big(-\ln{(1-\hat{p})}\big)
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-Loss(\hat{p},y)= \underbrace{y\cdot\big(-\ln{(\hat{p})}\big)}_{\color{grey}{\text{“disabled” for }}y=0}+\underbrace{(1-y)\cdot\big(-\ln{(1-\hat{p})}\big)}_{\color{grey}{\text{“disabled” for }}y=1}
-\]</div>
+$$</p>
+<p>$$
+Loss(\hat{p},y)= \underbrace{y\cdot\big(-\ln{(\hat{p})}\big)}<em>{\color{grey}{\text{“disabled” for }}y=0}+\underbrace{(1-y)\cdot\big(-\ln{(1-\hat{p})}\big)}</em>{\color{grey}{\text{“disabled” for }}y=1}
+$$</p>
 </section>
 <section id="id27">
 <h2>Now, just add it all up<a class="headerlink" href="#id27" title="Permalink to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<p>$$
 Loss(\hat{p},y)=\begin{cases}
--\ln{(\hat{p})} &amp;\text{if } y=1 \\
+-\ln{(\hat{p})} &amp;\text{if } y=1 \
 -\ln{(1-\hat{p})} &amp;\text{if } y=0
 \end{cases}
-\end{split}\]</div>
-<p>Because y is always 0 or 1 we can write this:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-Loss(\hat{p},y) &amp;= y\cdot\big(-\ln{(\hat{p})}\big)+(1-y)\cdot\big(-\ln{(1-\hat{p})}\big) \\
+$$
+Because y is always 0 or 1 we can write this:</p>
+<p>$$\begin{align*}
+Loss(\hat{p},y) &amp;= y\cdot\big(-\ln{(\hat{p})}\big)+(1-y)\cdot\big(-\ln{(1-\hat{p})}\big) \
 Loss(\hat{p},y) &amp;= -\big[y\ln{(\hat{p})} + (1-y)\ln{(1-\hat{p})}\big]
-\end{align*}\end{split}\]</div>
+\end{align*}$$</p>
 <p>This loss function can be directly obtained from MLE (maximum likelihood estimation)</p>
 </section>
 <section id="now-lets-use-the-loss-function-for-all-observations">
 <h2>Now, let’s use the Loss function for all observations!<a class="headerlink" href="#now-lets-use-the-loss-function-for-all-observations" title="Permalink to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-Loss(\hat{p},y) &amp;= -\big[y\ln{(\hat{p})} + (1-y)\ln{(1-\hat{p})}\big] \\
+<p>$$\begin{align*}
+Loss(\hat{p},y) &amp;= -\big[y\ln{(\hat{p})} + (1-y)\ln{(1-\hat{p})}\big] \
 J(b) &amp;= -\frac{1}{n}\sum\big[y\ln\left(\hat{p}\right)\ +\ (1-y)\ln\left(1-\hat{p}\right)\big]
-\end{align*}\end{split}\]</div>
+\end{align*}$$</p>
 <p>Find <em>b</em> that minimizes J(b).</p>
 <p>To minimize the cost function we use gradient descent!</p>
 </section>
@@ -1542,8 +1511,7 @@ J(b) &amp;= -\frac{1}{n}\sum\big[y\ln\left(\hat{p}\right)\ +\ (1-y)\ln\left(1-\h
 <li><p>There is no closed form solution as the Normal Equation (X X) X y for linear regression.</p></li>
 <li><p>So get the partial derivatives and start the <strong>gradient descent</strong>!</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\frac{\partial}{\partial b_{j}}J(b)=\frac{1}{n}\sum_{i=1}^{n}\Bigl(\sigma\Bigl(b^{T}x_{i}\Bigr)-y_{i}\Bigr)x_{i,j}\]</div>
+<p>$$\frac{\partial}{\partial b_{j}}J(b)=\frac{1}{n}\sum_{i=1}^{n}\Bigl(\sigma\Bigl(b^{T}x_{i}\Bigr)-y_{i}\Bigr)x_{i,j}$$</p>
 <p><img alt="img_p1_1" src="../_images/img_p49_1.png" /></p>
 </section>
 <section id="conclusion">
