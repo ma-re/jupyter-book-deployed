@@ -37,7 +37,6 @@ jobs:
         publish_dir: ./DSBOOK/_build/html
 
   # This copies the images from the main to the gh-pages branch
-jobs:
   copy-to-branches:
     runs-on: ubuntu-latest
     steps:
