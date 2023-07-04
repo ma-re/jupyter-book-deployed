@@ -48,5 +48,5 @@ jobs:
         uses: planetoftheweb/copy-to-branches@v1
         env:
           key: main
-          branches: gh-pages/_images
+          branches: gh-pages/
           files: DSBOOK/images/*
