@@ -9,4 +9,4 @@ parts:
     - file: sessions/12_Logistic_Regression
   - caption: RATs
     chapters:
-    - file: RATs/01_Python_Part_1_RAT.ipynb
+    - file: RATs/01_Python_Part_1_RAT
