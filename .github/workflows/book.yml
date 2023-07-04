@@ -28,6 +28,7 @@ jobs:
     - name: Build the book
       run: |
         jupyter-book build DSBOOK
+        mv ./DSBOOK/images/* ./DSBOOK/_build/html/_images/
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
@@ -35,17 +36,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./DSBOOK/_build/html
-
-  # This copies the images from the main to the gh-pages branch
-  copy-to-branches:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Copy To Branches Action
-        uses: planetoftheweb/copy-to-branches@v1
-        env:
-          key: main
-          branches: gh-pages
-          files: DSBOOK/images/*
+        
