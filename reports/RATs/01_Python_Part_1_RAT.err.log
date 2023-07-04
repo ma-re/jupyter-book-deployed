@@ -23,7 +23,7 @@ display_quiz(path, colors=color_dict)
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mAttributeError[0m                            Traceback (most recent call last)
-[0;32m/tmp/ipykernel_1774/1843630169.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_1814/1843630169.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      1[0m [0;31m# Display questions[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 2[0;31m [0mdisplay_quiz[0m[0;34m([0m[0mpath[0m[0;34m,[0m [0mcolors[0m[0;34m=[0m[0mcolor_dict[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
