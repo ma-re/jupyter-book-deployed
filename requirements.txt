@@ -2,7 +2,7 @@ pandas
 notebook
 jupyter-book
 jupytext
-JupyterQuiz
+jupyterquiz
 rise
 seaborn
 pix2tex==0.1.2
